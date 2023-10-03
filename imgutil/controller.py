@@ -23,3 +23,4 @@ class FunctionController:
         directory = ImageDirectory(directory_path)
         for item in directory.list_all_files():
             self.compressor.compress_img(item, replace=wants_replace)
+        print("!!!Operation complete!!!")

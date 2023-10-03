@@ -25,15 +25,6 @@ class FunctionController:
         ImageDirectory(directory_path).lowercase_all_files()
         print("!!!Operation complete!!!")
 
-    @staticmethod
-    def _get_dir_path():
-        import tkinter as tk
-        from tkinter import filedialog
-        # Create a Tkinter root window (it won't be shown)
-        root = tk.Tk()
-        root.withdraw()  # Hide the root window
-        return filedialog.askdirectory();
-
     def change_idx(self):
         print("Select a folder (ALL images in ALL subdirectories will be included as well)")
         directory_path = self._get_dir_path()
@@ -41,3 +32,12 @@ class FunctionController:
         x = int(input())
         ImageDirectory(directory_path).reset_all_files_counter(x)
         print("!!!Operation complete!!!")
+
+    @staticmethod
+    def _get_dir_path():
+        import tkinter as tk
+        from tkinter import filedialog
+        # Create a Tkinter root window (it won't be shown)
+        root = tk.Tk()
+        root.withdraw()  # Hide the root window
+        return filedialog.askdirectory()

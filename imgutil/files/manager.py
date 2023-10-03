@@ -5,8 +5,8 @@ from pathlib import Path
 
 class ImageDirectory:
 
-    def __init__(self, directory, valid_extensions = ("png", "jpg", "jpeg")):
-        self.dir_path = Path(directory)
+    def __init__(self, abs_path, valid_extensions = ("png", "jpg", "jpeg")):
+        self.dir_path = Path(abs_path)
         self.valid_ext = valid_extensions
         self.files = []
         self.dirs = []

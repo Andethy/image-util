@@ -11,13 +11,18 @@ class Main:
         while True:
             print("---Enter one the following:\n"
                   "[1] Compress Images in a given directory\n"
+                  "[2] Lowercase Images in a given directory\n"
+                  "[3] Change Images index in a given directory\n"
                   "[0] Exit program")
             x = int(input())
             if x == 0:
                 break;
             elif x == 1:
                 self.controller.compress()
-
+            elif x == 2:
+                self.controller.lower_imgs()
+            elif x == 3:
+                self.controller.change_idx()
 
 
 if __name__ == '__main__':
